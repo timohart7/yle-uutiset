@@ -19,7 +19,23 @@ jobs:
         with:
           python-version: "3.12"
       - run: python main.py
+      - env:
+          REPO: ${{ github.repository }}
+          REF: ${{ github.ref_name }}
+        run: |
+          python << 'PY'
+          import os
+          from pathlib import Path
+          import xml.etree.ElementTree as ET
+
+          base = f"https://raw.githubusercontent.com/{os.environ['REPO']}/{os.environ['REF']}/rss"
+          lines = ["# Yle", ""]
+          for path in sorted(Path("rss").glob("*.xml")):
+              title = ET.parse(path).getroot().find("channel").findtext("title")
+              lines.append(f"- [{title}]({base}/{path.name})")
+          Path("README.md").write_text("\n".join(lines) + "\n", encoding="utf-8")
+          PY
       - run: |
-          git add rss
+          git add rss README.md
           git diff --staged --quiet || git -c user.name="github-actions[bot]" -c user.email="41898282+github-actions[bot]@users.noreply.github.com" commit -m "Update feed"
           git push
