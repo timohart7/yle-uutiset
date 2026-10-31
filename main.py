@@ -10,10 +10,11 @@ import sys
 import urllib.request
 import xml.etree.ElementTree as ET
 from pathlib import Path
-from xml.sax.saxutils import escape
+from xml.sax.saxutils import escape, quoteattr
 
 UA = "yle-uutiset"
 AUDIO = re.compile(r'"audioContent"\s*:\s*(\{[^{}]*\})')
+IMAGE = re.compile(r'<meta property="og:image" content="([^"]+)"')
 ITEM = re.compile(r"<item>.*?</item>", re.DOTALL)
 GUID = re.compile(r"<guid>([^<]+)</guid>")
 
@@ -56,7 +57,7 @@ FEEDS = {
     "varsinais-suomi": ("Varsinais-Suomi", "https://yle.fi/rss/t/18-135507/fi"),
 }
 
-_audio: dict[str, str | None] = {}
+_media: dict[str, tuple[str | None, str | None]] = {}
 
 
 def get(url: str) -> bytes:
@@ -71,32 +72,35 @@ def load_items(path: Path) -> list[str]:
     return [match.group(0) for match in ITEM.finditer(path.read_text(encoding="utf-8"))]
 
 
-def item_xml(title: str, link: str, published: str, description: str, audio: str) -> str:
-    return "\n".join(
-        [
-            "<item>",
-            f"  <title>{escape(title)}</title>",
-            f"  <link>{escape(link)}</link>",
-            f"  <guid>{escape(link)}</guid>",
-            f"  <pubDate>{escape(published)}</pubDate>",
-            f"  <description>{escape(description)}</description>",
-            f'  <enclosure url="{escape(audio)}" length="0" type="audio/mpeg"/>',
-            "</item>",
-        ]
-    )
+def item_xml(title: str, link: str, published: str, description: str, audio: str, image: str | None) -> str:
+    lines = [
+        "<item>",
+        f"  <title>{escape(title)}</title>",
+        f"  <link>{escape(link)}</link>",
+        f"  <guid>{escape(link)}</guid>",
+        f"  <pubDate>{escape(published)}</pubDate>",
+        f"  <description>{escape(description)}</description>",
+        f'  <enclosure url="{escape(audio)}" length="0" type="audio/mpeg"/>',
+    ]
+    if image:
+        lines.append(f"  <itunes:image href={quoteattr(image)}/>")
+    lines.append("</item>")
+    return "\n".join(lines)
 
 
-def article_audio(link: str) -> str | None:
-    if link not in _audio:
-        match = AUDIO.search(get(link).decode("utf-8", "replace"))
-        url = None
+def article_media(link: str) -> tuple[str | None, str | None]:
+    if link not in _media:
+        html = get(link).decode("utf-8", "replace")
+        match = AUDIO.search(html)
+        audio = None
         if match:
             try:
-                url = json.loads(match.group(1)).get("url") or None
+                audio = json.loads(match.group(1)).get("url") or None
             except json.JSONDecodeError:
-                url = None
-        _audio[link] = url
-    return _audio[link]
+                audio = None
+        image = IMAGE.search(html)
+        _media[link] = (audio, image.group(1) if image else None)
+    return _media[link]
 
 
 def new_items(rss_url: str, known: set[str]) -> list[str]:
@@ -107,7 +111,7 @@ def new_items(rss_url: str, known: set[str]) -> list[str]:
         title = (item.findtext("title") or "").strip()
         if not link.startswith("http") or not title or link in known:
             continue
-        audio = article_audio(link)
+        audio, image = article_media(link)
         if not audio:
             continue
         items.append(
@@ -117,6 +121,7 @@ def new_items(rss_url: str, known: set[str]) -> list[str]:
                 item.findtext("pubDate") or "",
                 item.findtext("description") or "",
                 audio,
+                image,
             )
         )
         known.add(link)
@@ -127,7 +132,7 @@ def write_feed(path: Path, title: str, items: list[str]) -> None:
     body = "\n".join(
         [
             '<?xml version="1.0" encoding="UTF-8"?>',
-            '<rss version="2.0">',
+            '<rss version="2.0" xmlns:itunes="http://www.itunes.com/dtds/podcast-1.0.dtd">',
             "<channel>",
             f"<title>Yle.fi | {escape(title)}</title>",
             "<link>https://yle.fi/uutiset</link>",
