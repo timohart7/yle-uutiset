@@ -3,8 +3,6 @@ name: Feed
 on:
   push:
     branches: [master, main]
-  schedule:
-    - cron: "8,23,38,53 * * * *"
   workflow_dispatch:
 
 permissions:
