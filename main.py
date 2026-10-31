@@ -12,10 +12,7 @@ import xml.etree.ElementTree as ET
 from pathlib import Path
 from xml.sax.saxutils import escape
 
-UA = (
-    "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 "
-    "(KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36"
-)
+UA = "yle-uutiset"
 AUDIO = re.compile(r'"audioContent"\s*:\s*(\{[^{}]*\})')
 ITEM = re.compile(r"<item>.*?</item>", re.DOTALL)
 GUID = re.compile(r"<guid>([^<]+)</guid>")
