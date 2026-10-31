@@ -13,6 +13,7 @@ from pathlib import Path
 from xml.sax.saxutils import escape, quoteattr
 
 UA = "yle-uutiset"
+COVER = "https://yle.fi/ukko/assets/img/yle-logo-180.png"
 AUDIO = re.compile(r'"audioContent"\s*:\s*(\{[^{}]*\})')
 IMAGE = re.compile(r'<meta property="og:image" content="([^"]+)"')
 ITEM = re.compile(r"<item>.*?</item>", re.DOTALL)
@@ -169,6 +170,7 @@ def write_feed(path: Path, title: str, items: list[str]) -> None:
             "<link>https://yle.fi/uutiset</link>",
             f"<description>Ylen {escape(title)} kuunneltavina juttuina.</description>",
             "<language>fi</language>",
+            f"<itunes:image href={quoteattr(COVER)}/>",
             *items,
             "</channel>",
             "</rss>",
