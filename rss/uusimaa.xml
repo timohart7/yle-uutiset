@@ -1,10 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<rss version="2.0">
+<rss version="2.0" xmlns:itunes="http://www.itunes.com/dtds/podcast-1.0.dtd">
 <channel>
 <title>Yle.fi | Uusimaa</title>
 <link>https://yle.fi/uutiset</link>
 <description>Ylen Uusimaa kuunneltavina juttuina.</description>
 <language>fi</language>
+<itunes:image href="https://yle.fi/ukko/assets/img/yle-logo-180.png"/>
 <item>
   <title>Poliisi selvittää helsinkiläiskoululla ollutta mahdollista väkivaltatilannetta: osapuolina työntekijä ja kaksi oppilasta</title>
   <link>https://yle.fi/a/74-20254336</link>

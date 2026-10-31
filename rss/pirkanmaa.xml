@@ -1,10 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<rss version="2.0">
+<rss version="2.0" xmlns:itunes="http://www.itunes.com/dtds/podcast-1.0.dtd">
 <channel>
 <title>Yle.fi | Pirkanmaa</title>
 <link>https://yle.fi/uutiset</link>
 <description>Ylen Pirkanmaa kuunneltavina juttuina.</description>
 <language>fi</language>
+<itunes:image href="https://yle.fi/ukko/assets/img/yle-logo-180.png"/>
 <item>
   <title>Eläinklinikkahoitaja Vilma Viitanen löysi oikean ravinnon – uransa jo paketoinut nyrkkeilijä hakeekin olympiapaikkaa</title>
   <link>https://yle.fi/a/74-20254020</link>

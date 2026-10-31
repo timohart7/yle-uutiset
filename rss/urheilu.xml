@@ -1,10 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<rss version="2.0">
+<rss version="2.0" xmlns:itunes="http://www.itunes.com/dtds/podcast-1.0.dtd">
 <channel>
 <title>Yle.fi | Urheilu</title>
 <link>https://yle.fi/uutiset</link>
 <description>Ylen Urheilu kuunneltavina juttuina.</description>
 <language>fi</language>
+<itunes:image href="https://yle.fi/ukko/assets/img/yle-logo-180.png"/>
+<item>
+  <title>Afrikan ensimmäiset olympialaiset alkavat Dakarissa – Suomea edustaa neljä nuorta urheilijaa</title>
+  <link>https://yle.fi/a/74-20253524</link>
+  <guid>https://yle.fi/a/74-20253524</guid>
+  <pubDate>Sat, 31 Oct 2026 08:44:21 +0200</pubDate>
+  <description>Dakarin nuorten kisat ovat tärkeä osa valmistautumista varsinaisiin olympialaisiin, sanoo taekwondossa kilpailevan Aina Kirtseliksen valmentaja Suvi Mikkonen.</description>
+  <enclosure url="https://article-audio-backend-prod.c1.yle.fi/87-74-20253524.1793429061-001.mp3" length="0" type="audio/mpeg"/>
+  <itunes:duration>6:54</itunes:duration>
+  <itunes:image href="https://img.img-cdn.yle.fi/crop_extract,w_1917,h_1078,x_3,y_52/crop_fill,w_1200,h_628/f_auto/39-17275326ade27c057ba6/1793004698"/>
+</item>
 <item>
   <title>Eläinklinikkahoitaja Vilma Viitanen löysi oikean ravinnon – uransa jo paketoinut nyrkkeilijä hakeekin olympiapaikkaa</title>
   <link>https://yle.fi/a/74-20254020</link>

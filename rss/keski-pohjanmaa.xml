@@ -1,10 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<rss version="2.0">
+<rss version="2.0" xmlns:itunes="http://www.itunes.com/dtds/podcast-1.0.dtd">
 <channel>
 <title>Yle.fi | Keski-Pohjanmaa</title>
 <link>https://yle.fi/uutiset</link>
 <description>Ylen Keski-Pohjanmaa kuunneltavina juttuina.</description>
 <language>fi</language>
+<itunes:image href="https://yle.fi/ukko/assets/img/yle-logo-180.png"/>
 <item>
   <title>Lentokenttien vahvuudet ja heikkoudet listattiin: tältä ne näyttävät</title>
   <link>https://yle.fi/a/74-20254203</link>

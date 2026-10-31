@@ -1,10 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<rss version="2.0">
+<rss version="2.0" xmlns:itunes="http://www.itunes.com/dtds/podcast-1.0.dtd">
 <channel>
 <title>Yle.fi | Pääuutiset</title>
 <link>https://yle.fi/uutiset</link>
 <description>Ylen Pääuutiset kuunneltavina juttuina.</description>
 <language>fi</language>
+<itunes:image href="https://yle.fi/ukko/assets/img/yle-logo-180.png"/>
 <item>
   <title>Joutomaiden metsitykseen kaavaillaan uutta, tuhansien eurojen tukea</title>
   <link>https://yle.fi/a/74-20252772</link>

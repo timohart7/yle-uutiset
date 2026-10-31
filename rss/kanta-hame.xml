@@ -1,10 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<rss version="2.0">
+<rss version="2.0" xmlns:itunes="http://www.itunes.com/dtds/podcast-1.0.dtd">
 <channel>
 <title>Yle.fi | Kanta-Häme</title>
 <link>https://yle.fi/uutiset</link>
 <description>Ylen Kanta-Häme kuunneltavina juttuina.</description>
 <language>fi</language>
+<itunes:image href="https://yle.fi/ukko/assets/img/yle-logo-180.png"/>
 <item>
   <title>Väestökato uhkaa tyhjentää musiikkiopistoja – tukiuudistus voi turvata opinahjoja, joista on ylletty maailmanmaineeseen</title>
   <link>https://yle.fi/a/74-20253631</link>

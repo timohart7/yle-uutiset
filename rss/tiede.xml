@@ -1,10 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<rss version="2.0">
+<rss version="2.0" xmlns:itunes="http://www.itunes.com/dtds/podcast-1.0.dtd">
 <channel>
 <title>Yle.fi | Tiede</title>
 <link>https://yle.fi/uutiset</link>
 <description>Ylen Tiede kuunneltavina juttuina.</description>
 <language>fi</language>
+<itunes:image href="https://yle.fi/ukko/assets/img/yle-logo-180.png"/>
 <item>
   <title>Katri Saarikiven kolumni: Epävarmuus on hirveää, mutta kun tekee siitä hauskaa, oppiminen tehostuu</title>
   <link>https://yle.fi/a/74-20253810</link>

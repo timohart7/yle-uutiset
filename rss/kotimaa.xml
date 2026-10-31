@@ -1,10 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<rss version="2.0">
+<rss version="2.0" xmlns:itunes="http://www.itunes.com/dtds/podcast-1.0.dtd">
 <channel>
 <title>Yle.fi | Kotimaa</title>
 <link>https://yle.fi/uutiset</link>
 <description>Ylen Kotimaa kuunneltavina juttuina.</description>
 <language>fi</language>
+<itunes:image href="https://yle.fi/ukko/assets/img/yle-logo-180.png"/>
+<item>
+  <title>Analyysi: Mira Luoti ei ole ainoa, jonka tosi-tv:n tuotantoyhtiö jätti turvattomiin oloihin</title>
+  <link>https://yle.fi/a/74-20254251</link>
+  <guid>https://yle.fi/a/74-20254251</guid>
+  <pubDate>Sat, 31 Oct 2026 09:00:39 +0200</pubDate>
+  <description>Tuore oikeudenkäynti nostaa jälleen esiin tosi-tv-tuotantojen kyseenalaiset toimintatavat, kirjoittavat tutkivat toimittajat Johanna Mattinen ja Jaakko Mäntymaa.</description>
+  <enclosure url="https://article-audio-backend-prod.c1.yle.fi/87-74-20254251.1793430039-001.mp3" length="0" type="audio/mpeg"/>
+  <itunes:duration>6:13</itunes:duration>
+  <itunes:image href="https://img.img-cdn.yle.fi/crop_extract,w_5743,h_3230,x_0,y_267/crop_fill,w_1200,h_628/f_auto/39-17279776adf536080c54/1793020917"/>
+</item>
 <item>
   <title>Sähkökelkkojen toimintamatka pitenee, mutta siltikään ne eivät kiinnosta kuluttajia</title>
   <link>https://yle.fi/a/74-20253791</link>

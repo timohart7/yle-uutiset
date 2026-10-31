@@ -1,10 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<rss version="2.0">
+<rss version="2.0" xmlns:itunes="http://www.itunes.com/dtds/podcast-1.0.dtd">
 <channel>
 <title>Yle.fi | Luonto</title>
 <link>https://yle.fi/uutiset</link>
 <description>Ylen Luonto kuunneltavina juttuina.</description>
 <language>fi</language>
+<itunes:image href="https://yle.fi/ukko/assets/img/yle-logo-180.png"/>
+<item>
+  <title>Maat sitoutuivat vauhdittamaan luonnonsuojelutavoitteiden toteuttamista</title>
+  <link>https://yle.fi/a/74-20254358</link>
+  <guid>https://yle.fi/a/74-20254358</guid>
+  <pubDate>Sat, 31 Oct 2026 08:45:42 +0200</pubDate>
+  <description>Tunnelmaa painoi se, että joissakin vaikeimmista kysymyksistä edistyttiin vain vähän.</description>
+  <enclosure url="https://article-audio-backend-prod.c1.yle.fi/87-74-20254358.1793429142-001.mp3" length="0" type="audio/mpeg"/>
+  <itunes:duration>1:49</itunes:duration>
+  <itunes:image href="https://img.img-cdn.yle.fi/crop_fill,w_1200,h_628/f_auto/39-12692236617e49e05397"/>
+</item>
 <item>
   <title>Voisiko tämä olla tulevaisuutta kaupungeissa? Oulussa kulkija voi itse päättää, kuinka valoisaksi hän reitin haluaa</title>
   <link>https://yle.fi/a/74-20253825</link>
