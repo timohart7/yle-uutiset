@@ -7,6 +7,36 @@
 <language>fi</language>
 <itunes:image href="https://yle.fi/ukko/assets/img/yle-logo-180.png"/>
 <item>
+  <title>Sää vaihtelee tänään lumisateesta poutaan</title>
+  <link>https://yle.fi/a/74-20257036</link>
+  <guid>https://yle.fi/a/74-20257036</guid>
+  <pubDate>Sun, 15 Nov 2026 05:55:36 +0200</pubDate>
+  <description>Lapissa sataa lunta ja ajokeli voi olla huono. Etelä-Suomessa lämpötila voi kohota kahdeksaan asteeseen.</description>
+  <enclosure url="https://article-audio-backend-prod.c1.yle.fi/87-74-20257036.1794714936-001.mp3" length="0" type="audio/mpeg"/>
+  <itunes:duration>1:02</itunes:duration>
+  <itunes:image href="https://img.img-cdn.yle.fi/crop_extract,w_1919,h_1080,x_0,y_0/crop_fill,w_1200,h_628/f_auto/39-17384856af8a5452a233/1794680150"/>
+</item>
+<item>
+  <title>”Ei se ole mitään persutouhua”, sanoo Antti Häkkänen, kun kokoomus lipuu oikealle</title>
+  <link>https://yle.fi/a/74-20256372</link>
+  <guid>https://yle.fi/a/74-20256372</guid>
+  <pubDate>Sun, 15 Nov 2026 05:30:36 +0200</pubDate>
+  <description>Jos konservatiiviset arvot kantavat, kokoomuksen Häkkänen voi olla Petteri Orpon seuraaja. Häkkänen sanoo, että puolustusrahoista pitää sopia kulisseissa.</description>
+  <enclosure url="https://article-audio-backend-prod.c1.yle.fi/87-74-20256372.1794713436-001.mp3" length="0" type="audio/mpeg"/>
+  <itunes:duration>12:00</itunes:duration>
+  <itunes:image href="https://img.img-cdn.yle.fi/crop_extract,w_5739,h_3228,x_0,y_498/crop_fill,w_1200,h_628/f_auto/39-17233346ad1db01891d9/1792138384"/>
+</item>
+<item>
+  <title>Yhdysvaltain lentokielto vaikutti vielä lauantaina noin 15 000 lentoon, sunnuntain lentoja jo peruttu</title>
+  <link>https://yle.fi/a/74-20257035</link>
+  <guid>https://yle.fi/a/74-20257035</guid>
+  <pubDate>Sun, 15 Nov 2026 05:01:02 +0200</pubDate>
+  <description>Perjantaina kaikkiaan liki 17 000 lentoa peruuntui tai myöhästyi Yhdysvalloissa.</description>
+  <enclosure url="https://article-audio-backend-prod.c1.yle.fi/87-74-20257035.1794711662-003.mp3" length="0" type="audio/mpeg"/>
+  <itunes:duration>1:23</itunes:duration>
+  <itunes:image href="https://img.img-cdn.yle.fi/crop_extract,w_6144,h_3456,x_0,y_0/crop_fill,w_1200,h_628/f_auto/39-17384646af891f4d4cde/1794675273"/>
+</item>
+<item>
   <title>Seurakuntavaaleissa äänestetään tänään</title>
   <link>https://yle.fi/a/74-20257034</link>
   <guid>https://yle.fi/a/74-20257034</guid>
